@@ -11,6 +11,7 @@ const description = "Welcome to Hollywood 2056! Step into the shoes of Artman, a
     :mobileImage="mobileImage"
     :desktopImage="desktopImage"
     :description="description"
+    customImgClass="main-shadow"
   >
     <template #titleSvg>
 

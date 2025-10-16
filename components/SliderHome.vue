@@ -96,16 +96,7 @@
           }
         }
       }
-      &:hover {
-        span {
-          img {
-            &:last-child {
-              opacity: 1;
-              z-index: 2;
-            }
-          }
-        }
-      }
+
     }
     a {
         display: flex;
@@ -135,6 +126,18 @@
       }
 
     @media (min-width: 1024px) {
+      .play-button {
+        &:hover {
+          span {
+            img {
+              &:last-child {
+                opacity: 1;
+                z-index: 2;
+              }
+            }
+          }
+        }
+      }
       a {
         margin-bottom: 50px;
         span {

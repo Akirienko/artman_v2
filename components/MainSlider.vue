@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup >
 
 const props = defineProps({
   mobileImage: String,
@@ -55,13 +55,19 @@ const props = defineProps({
 <style lang="scss" scoped>
 .main-slider {
   height: 100%;
+  overflow: hidden; // Запобігаємо виходу елементів за межі
+
   .image-container {
+    position: relative;
     height: 100%;
+    transition: transform 1.2s ease-out; // Повільний перехід для картинки (як швидкість слайдера)
   }
   .text-block {
     position: absolute;
     z-index: 1;
     bottom: 16px;
+    transition: transform 1.0s ease-out, opacity 0.6s ease-out; // Швидший перехід для тексту
+
     p {
       font-size: 14px;
       font-weight: 300;
@@ -122,10 +128,17 @@ const props = defineProps({
 
   @media (min-width: 1280px) {
     .image-container {
+          transition: transform 1.6s ease-out; // Повільний перехід для картинки (як швидкість слайдера)
+
       img {
         height: 544px;
         width: 382px;
       }
+    }
+
+    .text-block {
+
+      transition: transform 1.2s ease-out, opacity 0.6s ease-out;
     }
   }
 

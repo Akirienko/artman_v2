@@ -11,6 +11,8 @@ const description = "Player's actions will influence the  Mankind Index, an ind
     :mobileImage="mobileImage"
     :desktopImage="desktopImage"
     :description="description"
+    customImgClass="main-image"
+
   >
     <template #titleSvg>
 
@@ -25,5 +27,60 @@ const description = "Player's actions will influence the  Mankind Index, an ind
 </template>
 
 <style lang="scss" scoped>
+@media (min-width: 768px) {
+  :deep(.main-slider .image-container .main-image) {
+    width: 590px;
+    height: 650px;
+  }
 
+  :deep(.main-slider .image-container::before) {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 77px 55px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 77px 55px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 77px 55px rgba(0,0,0,0.75);
+    width: 17rem;
+    height: 34rem;
+    z-index: -1;
+  }
+}
+
+@media (min-width: 1024px) {
+  :deep(.main-slider .image-container .main-image) {
+    width: 352px;
+    height: 387px;
+  }
+
+  :deep(.main-slider .image-container::before) {
+    width: 10rem;
+    height: 21rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  :deep(.main-slider .image-container .main-image) {
+    width: 445px;
+    height: 500px;
+  }
+
+  :deep(.main-slider .image-container::before) {
+    width: 12rem;
+    height: 28rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  :deep(.main-slider .image-container .main-image) {
+    width: 585px;
+    height: 650px;
+  }
+  
+  :deep(.main-slider .image-container::before) {
+    width: 16rem;
+    height: 36rem;
+  }
+}
 </style>

@@ -11,6 +11,7 @@ const description = "The game features two fully voiced main characters. The fir
     :mobileImage="mobileImage"
     :desktopImage="desktopImage"
     :description="description"
+
   >
     <template #titleSvg>
 
@@ -25,5 +26,44 @@ const description = "The game features two fully voiced main characters. The fir
 </template>
 
 <style lang="scss" scoped>
+  @media (min-width: 768px) {
 
+    :deep(.main-slider .image-container::before) {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 51%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0px 0px 77px 55px rgba(0,0,0,0.75);
+      -webkit-box-shadow: 0px 0px 77px 55px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 0px 77px 55px rgba(0,0,0,0.75);
+      width: 19rem;
+      height: 32rem;
+      z-index: -1;
+    }
+  }
+
+  @media (min-width: 1024px) {
+
+    :deep(.main-slider .image-container::before) {
+      width: 13rem;
+      height: 20rem;
+    }
+  }
+
+  @media (min-width: 1240px) {
+
+    :deep(.main-slider .image-container::before) {
+      width: 18rem;
+      height: 27rem;
+    }
+  }
+
+  @media (min-width: 1240px) {
+
+    :deep(.main-slider .image-container::before) {
+      width: 21rem;
+      height: 33rem;
+    }
+  }
 </style>
