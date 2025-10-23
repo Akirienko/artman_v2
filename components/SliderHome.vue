@@ -79,6 +79,7 @@
         font-size: 19px;
         text-transform: uppercase;
         text-align: center;
+        letter-spacing: 0.2em;
         top: -10px;
         position: relative;
       }
@@ -109,7 +110,7 @@
         text-decoration: none;
         span {
           z-index: 3;
-          font-size: 14px;
+          font-size: 19px;
           font-weight: 600;
           line-height: 20px;
           letter-spacing: 2.8px;

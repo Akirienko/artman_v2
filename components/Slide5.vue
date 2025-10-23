@@ -38,9 +38,9 @@ const description = "The films stored in studio, where player can access detaile
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0px 0px 77px 55px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 0px 77px 55px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 77px 55px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 120px 55px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 120px 55px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 120px 55px rgba(0,0,0,0.75);
     width: 17rem;
     height: 34rem;
     z-index: -1;
@@ -49,32 +49,32 @@ const description = "The films stored in studio, where player can access detaile
 
 @media (min-width: 1024px) {
   :deep(.main-slider .image-container .main-image) {
-    width: 406px;
-    height: 387px;
+    width: 22rem;
+    height: 21rem;
   }
 
   :deep(.main-slider .image-container::before) {
-    width: 10rem;
-    height: 21rem;
+    width: 9rem;
+    height: 20rem;
   }
 }
 
 @media (min-width: 1280px) {
   :deep(.main-slider .image-container .main-image) {
-    width: 525px;
-    height: 500px;
+    width: 29.3rem;
+    height: 28rem;
   }
 
   :deep(.main-slider .image-container::before) {
     width: 12rem;
-    height: 28rem;
+    height: 27rem;
   }
 }
 
 @media (min-width: 1440px) {
   :deep(.main-slider .image-container .main-image) {
-    width: 683px;
-    height: 650px;
+    width: 663px;
+    height: 630px;
   }
 
   :deep(.main-slider .image-container::before) {

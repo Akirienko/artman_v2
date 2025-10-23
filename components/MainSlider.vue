@@ -72,6 +72,7 @@ const props = defineProps({
       font-size: 14px;
       font-weight: 300;
       line-height: 170%;
+      letter-spacing: 0.05em;
       text-align: center;
       color: #ECF7FF;
     }
@@ -120,8 +121,8 @@ const props = defineProps({
   @media (min-width: 1024px) {
     .image-container {
       img {
-        height: 420px;
-        width: 295px;
+        height: 336px;
+        width: 237px;
       }
     }
   }
@@ -131,8 +132,8 @@ const props = defineProps({
           transition: transform 1.6s ease-out; // Повільний перехід для картинки (як швидкість слайдера)
 
       img {
-        height: 544px;
-        width: 382px;
+        height: 444px;
+        width: 313px;
       }
     }
 
@@ -146,8 +147,8 @@ const props = defineProps({
     .image-container {
       height: 740px;
       img {
-        height: 644px;
-        width: 454px;
+        height: 632px;
+        width: 445px;
       }
     }
   }

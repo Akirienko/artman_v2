@@ -11,7 +11,7 @@ const description = "The game features two fully voiced main characters. The fir
     :mobileImage="mobileImage"
     :desktopImage="desktopImage"
     :description="description"
-
+    customImgClass="main-image"
   >
     <template #titleSvg>
 
@@ -34,9 +34,9 @@ const description = "The game features two fully voiced main characters. The fir
       top: 50%;
       left: 51%;
       transform: translate(-50%, -50%);
-      box-shadow: 0px 0px 77px 55px rgba(0,0,0,0.75);
-      -webkit-box-shadow: 0px 0px 77px 55px rgba(0,0,0,0.75);
-      -moz-box-shadow: 0px 0px 77px 55px rgba(0,0,0,0.75);
+      box-shadow: 0px 0px 120px 55px rgba(0,0,0,0.75);
+      -webkit-box-shadow: 0px 0px 120px 55px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 0px 120px 55px rgba(0,0,0,0.75);
       width: 19rem;
       height: 32rem;
       z-index: -1;
@@ -44,26 +44,40 @@ const description = "The game features two fully voiced main characters. The fir
   }
 
   @media (min-width: 1024px) {
+    :deep(.main-slider .image-container .main-image) {
+      width: 14rem;
+      height: 21rem;
+    }
+
+    :deep(.main-slider .image-container::before) {
+      width: 11rem;
+      height: 17rem;
+    }
+  }
+
+  @media (min-width: 1240px) {
+
+    :deep(.main-slider .image-container .main-image) {
+      width: 19rem;
+      height: 28rem;
+    }
 
     :deep(.main-slider .image-container::before) {
       width: 13rem;
-      height: 20rem;
+      height: 22rem;
     }
   }
 
-  @media (min-width: 1240px) {
+  @media (min-width: 1440px) {
 
-    :deep(.main-slider .image-container::before) {
-      width: 18rem;
-      height: 27rem;
+    :deep(.main-slider .image-container .main-image) {
+      width: 26rem;
+      height: 38rem;
     }
-  }
-
-  @media (min-width: 1240px) {
 
     :deep(.main-slider .image-container::before) {
-      width: 21rem;
-      height: 33rem;
+      width: 20rem;
+      height: 31rem;
     }
   }
 </style>

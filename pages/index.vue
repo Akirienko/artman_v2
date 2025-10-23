@@ -66,7 +66,11 @@ const onSwiper = (swiper) => {
 <template>
   <main>
     <div class="main-bg"></div>
-    <div class="line-dots"></div>
+    <div class="line-dots">
+      <img src="/images/icon/leftDots.svg" alt="dots" loading="lazy">
+      <img src="/images/icon/rightDots.svg" alt="dots" loading="lazy">
+
+    </div>
 
     <div class="pagination-wrapper">
       <img class="pagination-bg" src="/images/icon/paginationBg.svg" alt="">
@@ -108,6 +112,14 @@ const onSwiper = (swiper) => {
       @slide-change="onSlideChange"
       @slideChangeTransitionStart="onSlideChangeTransitionStart"
       @progress="onSlideProgress"
+      :breakpoints="{
+        // 1024: {
+        //   slidesPerView: 1,
+        //   spaceBetween: 50,
+        //   centeredSlides: true,
+        //   // loop: false
+        // }
+      }"
       class="my-swiper"
     >
       <SwiperSlide>
@@ -140,6 +152,27 @@ const onSwiper = (swiper) => {
 </template>
 
 <style lang="scss" scoped>
+.line-dots {
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  .line-dots {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: 1;
+    pointer-events: none;
+
+
+  }
+}
+
 .main-bg {
   position: absolute;
   top: 0;
@@ -166,6 +199,18 @@ const onSwiper = (swiper) => {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: opacity 0.6s ease;
+
+    // На десктопі налаштування для 3 слайдів з opacity ефектом
+    @media (min-width: 1024px) {
+      opacity: 0.5; // За замовчуванням opacity 0.5
+
+      // Активний слайд має повну прозорість
+      &.swiper-slide-active {
+        opacity: 1;
+        // width: 900px !important;
+      }
+    }
   }
 }
 

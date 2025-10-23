@@ -39,9 +39,9 @@ const description = "Player's actions will influence the  Mankind Index, an ind
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0px 0px 77px 55px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 0px 77px 55px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 77px 55px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 120px 55px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 120px 55px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 120px 55px rgba(0,0,0,0.75);
     width: 17rem;
     height: 34rem;
     z-index: -1;
@@ -50,34 +50,34 @@ const description = "Player's actions will influence the  Mankind Index, an ind
 
 @media (min-width: 1024px) {
   :deep(.main-slider .image-container .main-image) {
-    width: 352px;
-    height: 387px;
+    width: 19rem;
+    height: 21rem;
   }
 
   :deep(.main-slider .image-container::before) {
-    width: 10rem;
-    height: 21rem;
+    width: 9rem;
+    height: 20rem;
   }
 }
 
 @media (min-width: 1280px) {
   :deep(.main-slider .image-container .main-image) {
-    width: 445px;
-    height: 500px;
+    width: 25rem;
+    height: 28rem;
   }
 
   :deep(.main-slider .image-container::before) {
     width: 12rem;
-    height: 28rem;
+    height: 27rem;
   }
 }
 
 @media (min-width: 1440px) {
   :deep(.main-slider .image-container .main-image) {
-    width: 585px;
-    height: 650px;
+    width: 565px;
+    height: 630px;
   }
-  
+
   :deep(.main-slider .image-container::before) {
     width: 16rem;
     height: 36rem;

@@ -39,9 +39,9 @@ const description = "Beyond the global map, players can delve into the intricate
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0px 0px 77px 55px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 0px 77px 55px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 77px 55px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 120px 55px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 120px 55px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 120px 55px rgba(0,0,0,0.75);
     width: 35rem;
     height: 25rem;
     z-index: -1;

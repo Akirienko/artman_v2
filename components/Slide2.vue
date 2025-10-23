@@ -41,9 +41,9 @@ const description = "Artman is an authentic blend of genres, inspired by the phi
     top: 50%;
     left: 51%;
     transform: translate(-50%, -50%);
-    box-shadow: 0px 0px 77px 53px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 0px 77px 53px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 77px 53px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 120px 53px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 120px 53px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 120px 53px rgba(0,0,0,0.75);
     width: 252px;
     height: 600px;
     z-index: -1;
@@ -52,20 +52,20 @@ const description = "Artman is an authentic blend of genres, inspired by the phi
 
 @media (min-width: 1024px) {
   :deep(.main-slider .image-container .main-image) {
-    width: 520px;
-    height: 387px;
+    width: 470px;
+    height: 339px;
   }
 
   :deep(.main-slider .image-container::before) {
-    width: 140px;
-    height: 380px;
+    width: 130px;
+    height: 320px;
   }
 }
 
 @media (min-width: 1280px) {
   :deep(.main-slider .image-container .main-image) {
-    width: 720px;
-    height: 500px;
+    width: 642px;
+    height: 459px;
   }
   :deep(.main-slider .image-container::before) {
     width: 190px;
@@ -76,8 +76,8 @@ const description = "Artman is an authentic blend of genres, inspired by the phi
 
 @media (min-width: 1440px) {
   :deep(.main-slider .image-container .main-image) {
-    width: 860px;
-    height: 650px;
+    width: 840px;
+    height: 630px;
   }
 
   :deep(.main-slider .image-container::before) {

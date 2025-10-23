@@ -38,9 +38,9 @@ const description = "The game features two fully voiced main characters. The fir
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0px 0px 77px 55px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 0px 77px 55px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 77px 55px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 120px 55px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 120px 55px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 120px 55px rgba(0,0,0,0.75);
     width: 17rem;
     height: 34rem;
     z-index: -1;
@@ -49,34 +49,37 @@ const description = "The game features two fully voiced main characters. The fir
 
 @media (min-width: 1024px) {
   :deep(.main-slider .image-container .main-image) {
-    width: 204px ;
+    width: 9.3rem;
+    height: 19rem;
   }
 
   :deep(.main-slider .image-container::before) {
-    width: 11rem;
-    height: 22rem;
+    width: 8rem;
+    height: 16rem;
   }
 }
 
 @media (min-width: 1280px) {
   :deep(.main-slider .image-container .main-image) {
-    width: 265px ;
+    width: 13.2rem;
+    height: 27rem;
   }
 
   :deep(.main-slider .image-container::before) {
-    width: 14rem;
-    height: 31rem;
+    width: 11rem;
+    height: 26rem;
   }
 }
 
 @media (min-width: 1440px) {
   :deep(.main-slider .image-container .main-image) {
-    width: 315px;
+    width: 18.2rem;
+    height: 37rem;
   }
 
   :deep(.main-slider .image-container::before) {
     width: 16rem;
-    height: 36rem;
+    height: 35rem;
   }
 }
 </style>
