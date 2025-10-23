@@ -1,3 +1,4 @@
 <template>
+  <AppPreloader />
   <NuxtPage />
 </template>

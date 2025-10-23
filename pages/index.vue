@@ -21,37 +21,6 @@ const onSlideChange = (swiper) => {
   currentSlide.value = swiper.realIndex;
 };
 
-// Анімація при початку переходу між слайдами
-// const onSlideChangeTransitionStart = (swiper) => {
-//   console.log('Transition start');
-
-//   swiper.slides.forEach((slideEl, index) => {
-//     const imageContainer = slideEl.querySelector('.image-container');
-//     const textBlock = slideEl.querySelector('.text-block');
-
-//     if (imageContainer && textBlock) {
-//       // Перевіряємо ширину екрану
-//       const isLargeScreen = window.innerWidth > 1240;
-//       const translateValue = isLargeScreen ? '100%' : '50%';
-
-//       if (index === swiper.activeIndex) {
-//         // Активний слайд - елементи на місці
-//         textBlock.style.transform = 'translateX(0%)';
-//         textBlock.style.opacity = '1';
-//       }
-//       // } else if (index < swiper.activeIndex) {
-//       //   // Попередній слайд - рухається вліво
-//       //   textBlock.style.transform = `translateX(-${translateValue})`;
-//       //   textBlock.style.opacity = '0';
-//       // } else {
-//       //   // Наступний слайд - рухається вправо
-//       //   textBlock.style.transform = `translateX(${translateValue})`;
-//       //   textBlock.style.opacity = '0';
-//       // }
-//     }
-//   });
-// };
-
 // Паралакс ефект для текстового блоку (спрощений варіант)
 const onSlideProgress = (swiper) => {
 };
@@ -110,16 +79,7 @@ const onSwiper = (swiper) => {
       :allow-touch-move="true"
       @swiper="onSwiper"
       @slide-change="onSlideChange"
-      @slideChangeTransitionStart="onSlideChangeTransitionStart"
       @progress="onSlideProgress"
-      :breakpoints="{
-        // 1024: {
-        //   slidesPerView: 1,
-        //   spaceBetween: 50,
-        //   centeredSlides: true,
-        //   // loop: false
-        // }
-      }"
       class="my-swiper"
     >
       <SwiperSlide>
