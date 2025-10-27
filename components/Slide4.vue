@@ -2,7 +2,7 @@
 import mobileImage from "/images/mobile/bg4.webp"
 import desktopImage from "/images/desk/section4.webp"
 
-const description = "The game features two fully voiced main characters. The first is Artman himself — a symbolic name for a protagonist who turning everything he touches into art. The second is Evie, his close childhood friend who played a pivotal role in shaping who he is."
+const description = "In Artman, players have access to six distinct genres, each offering eight unique scripts. These screenplays unlock progressively as players build their reputation in Hollywood and complete side missions within the game world"
 
 </script>
 
