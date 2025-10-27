@@ -19,7 +19,31 @@
       </div>
       <div class="loader-container">
         <div class="loader-svg">
-          <img src="/images/loader.svg" alt="Loading..." />
+           <svg width="262" height="262" viewBox="0 0 262 262" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2_6288)">
+            <circle cx="131" cy="131" r="23.75" transform="rotate(-180 131 131)" stroke="#7B8699" stroke-width="0.5" stroke-dasharray="0.5 2"/>
+            <rect x="131.25" y="154.501" width="107" height="0.5" transform="rotate(90 131.25 154.501)" fill="url(#paint0_linear_2_6288)"/>
+            <rect width="107" height="0.5" transform="matrix(0 -1 -1 0 131.25 107.5)" fill="url(#paint1_linear_2_6288)"/>
+            <rect width="2" height="2" transform="matrix(0.707107 0.707107 0.707107 -0.707107 129.586 154.501)" fill="#5CDEE6"/>
+            <rect width="2" height="2" transform="matrix(0.707107 0.707107 0.707107 -0.707107 129.586 107.493)" fill="#5CDEE6"/>
+            </g>
+            <defs>
+            <linearGradient id="paint0_linear_2_6288" x1="238.25" y1="154.747" x2="131.25" y2="154.746" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#253596" stop-opacity="0"/>
+            <stop offset="0.456017" stop-color="#4A76D4"/>
+            <stop offset="1" stop-color="#76EAF1"/>
+            </linearGradient>
+            <linearGradient id="paint1_linear_2_6288" x1="107" y1="0.246154" x2="-1.5482e-06" y2="0.245479" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#253596" stop-opacity="0"/>
+            <stop offset="0.456017" stop-color="#4A76D4"/>
+            <stop offset="1" stop-color="#76EAF1"/>
+            </linearGradient>
+            <clipPath id="clip0_2_6288">
+            <rect width="262" height="262" fill="white" transform="matrix(-1 0 0 -1 262 262)"/>
+            </clipPath>
+            </defs>
+          </svg>
+
         </div>
         <div class="loading-percentage">
           {{ Math.round(loadingProgress) }}%
@@ -102,8 +126,8 @@ onMounted(() => {
     position: relative;
 
     .loader-svg {
-      width: 260px;
-      height: 260px;
+      width: 262px;
+      height: 262px;
       position: relative;
 
       img {

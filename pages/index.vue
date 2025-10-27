@@ -190,6 +190,7 @@ const onSwiper = (swiper) => {
     position: absolute;
     height: 100px;
     max-width: 1024px;
+    border: none;
   }
 
   .custom-pagination {
