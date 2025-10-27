@@ -17,7 +17,7 @@ const description = "Welcome to Hollywood 2056! Step into the shoes of Artman, a
 
       <picture>
         <source media="(min-width: 768px)" srcset="/images/icon/titles/TitleDesktop1.svg">
-        <img src="/images/icon/titles/TitleMobile1.svg" alt="title" loading="lazy" />
+        <img src="/images/icon/titles/TitleMobile1.svg" alt="title" />
       </picture>
 
     </template>

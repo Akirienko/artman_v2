@@ -35,7 +35,6 @@ const props = defineProps({
             :src="mobileImage"
             :alt="altText"
             :class="customImgClass"
-            loading="lazy"
           />
         </picture>
       </div>
@@ -43,7 +42,7 @@ const props = defineProps({
         <div class="line-container">
           <slot name="titleSvg"></slot>
           <div class="line">
-            <img src="/images/icon/line.svg" alt="line" loading="lazy" />
+            <img src="/images/icon/line.svg" alt="line" />
           </div>
         </div>
         <p>{{ description }}</p>

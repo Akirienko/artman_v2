@@ -6,7 +6,7 @@
       <div class="artman-image">
         <picture>
           <source media="(min-width: 768px)" srcset="/images/artmanDesk.svg">
-          <img src="/images/artmanMob.webp" alt="title" loading="lazy" />
+          <img src="/images/artmanMob.webp" alt="title" />
         </picture>
 
 

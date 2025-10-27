@@ -17,7 +17,7 @@ const description = "Artman is an authentic blend of genres, inspired by the phi
 
       <picture>
         <source media="(min-width: 768px)" srcset="/images/icon/titles/TitleDesktop2.svg">
-        <img src="/images/icon/titles/TitleMobile2.svg" alt="title" loading="lazy" />
+        <img src="/images/icon/titles/TitleMobile2.svg" alt="title" />
       </picture>
 
     </template>

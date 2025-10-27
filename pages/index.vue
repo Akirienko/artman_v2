@@ -10,6 +10,7 @@ const modules = [Navigation, Mousewheel];
 const swiperInstance = ref(null);
 const currentSlide = ref(0);
 const totalSlides = 8;
+const hasUserScrolled = ref(false);
 
 const goToSlide = (index) => {
   if (swiperInstance.value) {
@@ -19,9 +20,14 @@ const goToSlide = (index) => {
 
 const onSlideChange = (swiper) => {
   currentSlide.value = swiper.realIndex;
+
+  if (swiper.realIndex !== 0) {
+    hasUserScrolled.value = true;
+  }
+
+
 };
 
-// Паралакс ефект для текстового блоку (спрощений варіант)
 const onSlideProgress = (swiper) => {
 };
 
@@ -36,8 +42,8 @@ const onSwiper = (swiper) => {
   <main>
     <div class="main-bg"></div>
     <div class="line-dots">
-      <img src="/images/icon/leftDots.svg" alt="dots" loading="lazy">
-      <img src="/images/icon/rightDots.svg" alt="dots" loading="lazy">
+      <img src="/images/icon/leftDots.svg" alt="dots">
+      <img src="/images/icon/rightDots.svg" alt="dots">
 
     </div>
 
@@ -50,6 +56,25 @@ const onSwiper = (swiper) => {
           :style="{ transform: `translateX(${currentSlide * 34}px) translateY(-50%)` }"
         >
           <img src="/images/icon/activeDot.webp" alt="active dot" />
+
+          <Transition name="tooltip">
+            <div v-if="!hasUserScrolled" class="active-dot-slider__tooltip">
+              <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.66" d="M8 20L1.0459 0.875977C3.23183 1.60379 5.56954 2 8 2C10.4301 2 12.7674 1.60361 14.9531 0.875977L8 20Z" fill="url(#paint0_linear_1_1333)"/>
+                <path d="M6 23L8 24L10 23L8 22L6 23Z" fill="#589ADD"/>
+                <defs>
+                <linearGradient id="paint0_linear_1_1333" x1="7.44559" y1="21.4215" x2="9.99309" y2="-37.0459" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#253596" stop-opacity="0"/>
+                <stop offset="0.392628" stop-color="#4A76D4"/>
+                <stop offset="1" stop-color="#76EAF1"/>
+                </linearGradient>
+                </defs>
+              </svg>
+
+              <p>Scroll to Learn More</p>
+            </div>
+          </Transition>
+
         </div>
 
         <button
@@ -80,6 +105,7 @@ const onSwiper = (swiper) => {
       @swiper="onSwiper"
       @slide-change="onSlideChange"
       @progress="onSlideProgress"
+      :touch-angle="100"
       class="my-swiper"
     >
       <SwiperSlide>
@@ -152,6 +178,7 @@ const onSwiper = (swiper) => {
 .my-swiper {
   width: 100%;
   height: 100vh;
+  height: 100dvh;
 
   :deep(.swiper-slide) {
     width: 100%;
@@ -161,25 +188,19 @@ const onSwiper = (swiper) => {
     justify-content: center;
     transition: opacity 0.6s ease;
 
-    // На десктопі налаштування для 3 слайдів з opacity ефектом
     @media (min-width: 1024px) {
-      opacity: 0.5; // За замовчуванням opacity 0.5
+      opacity: 0.5;
 
-      // Активний слайд має повну прозорість
       &.swiper-slide-active {
         opacity: 1;
-        // width: 900px !important;
       }
     }
   }
 }
 
-// Кастомна пагінація
 .pagination-wrapper {
   position: fixed;
   top: 30px;
-  // left: 50%;
-  // transform: translateX(-50%);
   z-index: 100;
   display: flex;
   justify-content: center;
@@ -199,13 +220,12 @@ const onSwiper = (swiper) => {
     gap: 30px;
     position: relative;
 
-    // Рухома активна точка
     .active-dot-slider {
       position: absolute;
       z-index: 10;
       transition: transform 0.6s ease;
       pointer-events: none;
-      left: -18px; // Центруємо відносно маленьких точок
+      left: -18px;
       top: 50%;
       width: 40px;
       height: 40px;
@@ -217,6 +237,35 @@ const onSwiper = (swiper) => {
         width: 70px;
         height: 70px;
         display: block;
+      }
+
+      &__tooltip {
+        position: absolute;
+        bottom: -45px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        pointer-events: none;
+
+        p {
+          color: #FFFFFF;
+          font-size: 14px;
+          white-space: nowrap;
+          font-weight: 500;
+          text-align: center;
+          letter-spacing: 0.05em;
+        }
+
+        @media (min-width:768px) {
+          bottom: -50px;
+          p {
+            font-size: 19px;
+          }
+        }
       }
     }
     .pagination-dot {
@@ -265,5 +314,23 @@ const onSwiper = (swiper) => {
 
     }
   }
+}
+
+// Анімація для tooltip
+.tooltip-enter-active,
+.tooltip-leave-active {
+  transition: all 0.4s ease;
+}
+
+.tooltip-enter-from,
+.tooltip-leave-to {
+  opacity: 0;
+  transform: translateX(-50%) translateY(10px);
+}
+
+.tooltip-enter-to,
+.tooltip-leave-from {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0px);
 }
 </style>

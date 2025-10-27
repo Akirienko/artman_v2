@@ -15,8 +15,30 @@ export default defineNuxtConfig({
 			meta: [
 				{ charset: 'utf-8' },
 				{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
-
 			],
 		}
 	},
+	nitro: {
+    compressPublicAssets: true,
+    minify: true
+  },
+
+	vite: {
+    build: {
+      cssMinify: "esbuild",
+      cssCodeSplit: true,
+      minify: "esbuild",
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'swiper': ['swiper']
+          }
+        }
+      }
+    },
+    esbuild: {
+      drop: ['console', 'debugger'],
+      legalComments: 'none'
+    }
+  }
 })

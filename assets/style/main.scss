@@ -35,8 +35,15 @@ section {
   overflow: hidden;
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 100vh; /* Falack для старих браузерів */
+  height: 100dvh; /* Dynamic viewport height - враховує адресну строку */
 }
+
+:root {
+  --vh: 1vh;
+  --dvh: 1dvh;
+}
+
 
 .main-container {
   padding: 0 16px;

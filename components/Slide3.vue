@@ -17,7 +17,7 @@ const description = "The game features two fully voiced main characters. The fir
 
       <picture>
         <source media="(min-width: 768px)" srcset="/images/icon/titles/TitleDesktop3.svg">
-        <img src="/images/icon/titles/TitleMobile3.svg" alt="title" loading="lazy" />
+        <img src="/images/icon/titles/TitleMobile3.svg" alt="title" />
       </picture>
 
     </template>

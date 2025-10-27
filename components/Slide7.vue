@@ -17,7 +17,7 @@ const description = "Beyond the global map, players can delve into the intricate
 
       <picture>
         <source media="(min-width: 768px)" srcset="/images/icon/titles/TitleDesktop7.svg">
-        <img src="/images/icon/titles/TitleMobile7.svg" alt="title" loading="lazy" />
+        <img src="/images/icon/titles/TitleMobile7.svg" alt="title" />
       </picture>
 
     </template>

@@ -17,7 +17,7 @@ const description = "The films stored in studio, where player can access detaile
 
       <picture>
         <source media="(min-width: 768px)" srcset="/images/icon/titles/TitleDesktop5.svg">
-        <img src="/images/icon/titles/TitleMobile5.svg" alt="title" loading="lazy" />
+        <img src="/images/icon/titles/TitleMobile5.svg" alt="title" />
       </picture>
 
     </template>

@@ -103,7 +103,8 @@ onMounted(() => {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100vh; /* Fallback для старих браузерів */
+  height: 100dvh; /* Dynamic viewport height - враховує адресну строку */
   background-color: #000;
   display: flex;
   align-items: center;
@@ -139,10 +140,11 @@ onMounted(() => {
 
     .loading-percentage {
       color: #fff;
-      font-size: 18px;
+      font-size: 15px;
       font-weight: 600;
       text-align: center;
       position: absolute;
+      letter-spacing: 0.05em;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);

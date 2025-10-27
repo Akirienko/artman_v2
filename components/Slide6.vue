@@ -18,7 +18,7 @@ const description = "Player's actions will influence the  Mankind Index, an ind
 
       <picture>
         <source media="(min-width: 768px)" srcset="/images/icon/titles/TitleDesktop6.svg">
-        <img src="/images/icon/titles/TitleMobile6.svg" alt="title" loading="lazy" />
+        <img src="/images/icon/titles/TitleMobile6.svg" alt="title" />
       </picture>
 
     </template>
