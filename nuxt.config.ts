@@ -28,13 +28,7 @@ export default defineNuxtConfig({
       cssMinify: "esbuild",
       cssCodeSplit: true,
       minify: "esbuild",
-      rollupOptions: {
-        output: {
-          manualChunks: {
-            'swiper': ['swiper']
-          }
-        }
-      }
+
     },
     esbuild: {
       drop: ['console', 'debugger'],
