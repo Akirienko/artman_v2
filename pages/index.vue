@@ -5,6 +5,14 @@ import { Navigation, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
+// Встановлення title для головної сторінки
+useHead({
+  title: 'Artman',
+  meta: [
+    { name: 'description', content: 'Write your own movie-making story beyond time and epoch. Manage the smallest details of film production, to achieve the ultimate art of cinematography.' }
+  ]
+});
+
 const modules = [Navigation, Mousewheel];
 
 const swiperInstance = ref(null);
