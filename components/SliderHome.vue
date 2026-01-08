@@ -15,15 +15,15 @@
       </div>
 
       <div class="socials main-container">
-        <div class="play-button">
-          <span>
+        <div class="play">
+          <NuxtLink class="play-button" to="https://youtu.be/soU1MSZJS0k?si=KKr4naYMowfALfwW" target="_blank">
             <img class="" src="/images/icon/playMusic.svg" alt="play button">
             <img class="" src="/images/icon/playMusicHover.svg" alt="play button hover">
-          </span>
+          </NuxtLink>
           <p>gameplay trailer</p>
         </div>
         <div class="store-links">
-          <NuxtLink to="#" target="_blank">
+          <NuxtLink class="social-link" to="https://apps.apple.com/us/app/the-artman/id6450551283" target="_blank">
             <span>APP STORE</span>
             <img src="/images/icon/appStore.svg" alt="appstore">
             <img src="/images/icon/appStoreHover.svg" alt="appstore">
@@ -31,7 +31,7 @@
 
         </div>
         <div class="google-links">
-          <NuxtLink to="#" target="_blank">
+          <NuxtLink class="social-link" to="https://play.google.com/store/apps/details?id=com.WayHeartGame.Artman&pcampaignid=web_share" target="_blank">
             <span>GOOGLE PLAY</span>
             <img src="/images/icon/googlePlay.svg" alt="googlePlay">
             <img src="/images/icon/googlePlayHover.svg" alt="googlePlay">
@@ -67,7 +67,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    .play-button {
+    .play {
       cursor: pointer;
       display: flex;
       flex-direction: column;
@@ -84,7 +84,7 @@
         position: relative;
       }
 
-      span {
+      .play-button {
         img {
           width: 80px;
           height: 80px;
@@ -99,7 +99,7 @@
       }
 
     }
-    a {
+    .social-link {
         display: flex;
         height: 40px;
         align-items: center;
@@ -127,9 +127,9 @@
       }
 
     @media (min-width: 1024px) {
-      .play-button {
+      .play {
         &:hover {
-          span {
+          .play-button {
             img {
               &:last-child {
                 opacity: 1;
@@ -139,7 +139,7 @@
           }
         }
       }
-      a {
+      .social-link {
         margin-bottom: 50px;
         span {
           font-size: 19px;
@@ -189,7 +189,7 @@
     }
     .socials {
       flex-direction: row;
-      .play-button {
+      .play {
         position: relative;
         order: 2;
         top: -10px;
